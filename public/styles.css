@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #2c1d30;
+  height: 100vh;
+}
+
+.neon {
+  animation: flicker 2s alternate infinite;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: default;
+  font-family: "Nunito", Helvetica, sans-serif;
+  font-size: 6rem;
+  height: 100%;
+  outline: none;
+  text-align: center;
+  text-shadow:
+    -2px -2px 5px #ee6cff,
+    2px 2px 5px #ee6cff,
+    0 0 10px #ee6cff, 
+    0 0 20px #ee6cff, 
+    0 0 40px #ee6cff,
+    0 0 80px #ee6cff, 
+    0 0 160px #ee6cff;
+  width: 100%;
+}
+
+@keyframes flicker {
+  0%, 9%, 11%, 19%, 21%, 69%, 71% {
+    color: #fff;
+    text-shadow: 
+      -2px -2px 5px #ee6cff,
+      2px 2px 5px #ee6cff,
+      0 0 10px #ee6cff, 
+      0 0 20px #ee6cff, 
+      0 0 40px #ee6cff,
+      0 0 80px #ee6cff, 
+      0 0 160px #ee6cff;
+  }
+  10%, 20%, 70% {
+    color: #808080;
+    text-shadow: none;
+  }
+}
